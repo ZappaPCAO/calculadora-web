@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <input type="text" class="resutlAnt" id="resultAnt" disabled />
+        <input type="text" class="result" id="result" disabled />
+        <div class="buttons">
+          <button class="btn operator col-first" onclick="clearResultAll()">
+            C
+          </button>
+          <button class="btn operator col-seccond" onclick="clearResult()">
+            CE
+          </button>
+          <button class="btn operator col-three" onclick="inputValue('/')">
+            /
+          </button>
+          <button class="btn operator delete" onclick="deleteValue()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-backspace-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"
+              />
+            </svg>
+          </button>
+          <button class="btn number col-first" onclick="inputValue('7')">
+            7
+          </button>
+          <button class="btn number col-seccond" onclick="inputValue('8')">
+            8
+          </button>
+          <button class="btn number col-three" onclick="inputValue('9')">
+            9
+          </button>
+          <button class="btn operator" onclick="inputValue('*')">*</button>
+
+          <button class="btn number col-first" onclick="inputValue('4')">
+            4
+          </button>
+          <button class="btn number col-seccond" onclick="inputValue('5')">
+            5
+          </button>
+          <button class="btn number col-three" onclick="inputValue('6')">
+            6
+          </button>
+          <button class="btn operator" onclick="inputValue('-')">-</button>
+
+          <button class="btn number col-first" onclick="inputValue('1')">
+            1
+          </button>
+          <button class="btn number col-seccond" onclick="inputValue('2')">
+            2
+          </button>
+          <button class="btn number col-three" onclick="inputValue('3')">
+            3
+          </button>
+          <button class="btn operator" onclick="inputValue('+')">+</button>
+
+          <button class="btn operator col-first" onclick="negValue()">
+            NEG
+          </button>
+          <button class="btn number col-seccond" onclick="inputValue('0')">
+            0
+          </button>
+          <button class="btn point col-three" onclick="inputValue('.')">
+            .
+          </button>
+          <button class="btn calculate" onclick="calculateResult()">=</button>
+        </div>
+      </div>
+    </div>
+    <script defer src="./calculadora.js"></script>
+  </body>
+</html>
